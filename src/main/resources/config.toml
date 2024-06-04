@@ -1,0 +1,7 @@
+spawn = { world = "kffa", x = 0.5, y = 116.0, z = 4.5, yaw = 180.0 }
+
+[sticks]
+starter = { id = "stick", name = "Knockback Stick" }
+
+[blocks]
+starter = { primary = "lime_wool", secondary = "yellow_wool", tertiary = "red_wool" }

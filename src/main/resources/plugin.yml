@@ -1,0 +1,12 @@
+name: February
+version: "${version}"
+main: me.honkling.february.February
+api-version: "1.19"
+prefix: February
+authors: [honkling]
+description: Knockback FFA.
+website: https://github.com/honkling/February
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0
+  - org.jetbrains.kotlin:kotlin-reflect:2.0.0
+  - fr.mrmicky:fastboard:2.1.2
