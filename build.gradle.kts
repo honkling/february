@@ -18,7 +18,9 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT")
     compileOnly("fr.mrmicky:fastboard:2.1.2")
-    implementation("com.github.honkling.commando:spigot:b9a3801631")
+    compileOnly("net.luckperms:api:5.4")
+
+    implementation("com.github.honkling.commando:spigot:21a7953e90")
     implementation("cc.ekblad:4koma:1.2.0")
 }
 

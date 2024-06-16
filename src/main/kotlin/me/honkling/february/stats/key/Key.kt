@@ -7,10 +7,10 @@ import kotlin.reflect.KProperty
 
 class Key<T, Z : Any>(
     field: KProperty<Key<T, Z>>,
-    private val type: PersistentDataType<T, Z>,
+    val type: PersistentDataType<T, Z>,
     private val defaultValue: Z
 ) {
-    private val key = NamespacedKey("february", field.name.lowercase())
+    val key = NamespacedKey("february", field.name.lowercase())
 
     operator fun set(holder: PersistentDataHolder, value: Z) {
         holder.persistentDataContainer.set(key, type, value)

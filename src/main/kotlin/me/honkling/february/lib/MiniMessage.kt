@@ -22,7 +22,7 @@ fun String.mm(vararg placeholders: TagResolver): Component {
 }
 
 fun Audience.sendBroadcast(message: String) {
-    sendMiniMessage("<b><p>${BRAND.uppercase()}</b> <dark_gray>|</dark_gray> $message")
+    sendMiniMessage("<b><p>$BRAND</b> <dark_gray>|</dark_gray> $message")
 }
 
 fun Audience.sendPositive(message: String) {

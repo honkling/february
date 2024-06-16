@@ -12,6 +12,7 @@ import me.honkling.february.stats.profile
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Statistic
+import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
@@ -25,8 +26,8 @@ fun updateBoard(player: Player) {
     boards[uuid] = board
 
     val profile = player.profile
-    val kills = player.getStatistic(Statistic.PLAYER_KILLS)
-    val deaths = player.getStatistic(Statistic.DEATHS)
+    val kills = profile.kills
+    val deaths = profile.deaths
 
     board.updateTitle("<b><dark_aqua>$BRAND</b> <dark_gray>| <b><aqua>S1".mm())
     board.updateLines(
@@ -38,7 +39,7 @@ fun updateBoard(player: Player) {
         formatStat("Streak", "${profile.streak} <b><dark_gray>(<b:false><aqua>${profile.bestStreak}</aqua></b>)"),
         Component.empty(),
         "<b><aqua>SERVER".mm(),
-        formatStat("Online", players.size),
+        formatStat("Online", "${players.size}/${Bukkit.getMaxPlayers()}"),
         formatStat("Joins", joins),
         formatStat("TPS", String.format("%.2f", Bukkit.getTPS()[0])),
         Component.empty(),
