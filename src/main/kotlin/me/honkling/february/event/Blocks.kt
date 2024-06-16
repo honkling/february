@@ -18,6 +18,8 @@ private fun onPlaceBlock(event: BlockPlaceEvent) {
     if (player.gameMode == GameMode.CREATIVE)
         return
 
+    event.itemInHand.amount = 64
+
     if (block.type == Material.COBWEB)
         scheduler.scheduleSyncDelayedTask(instance, {
             event.block.type = Material.AIR
